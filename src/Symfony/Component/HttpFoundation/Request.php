@@ -1896,6 +1896,6 @@ class Request
             return $request;
         }
 
-        return new static($query, $request, $attributes, $cookies, $files, $server, $content);
+        return new static($query, $request, $attributes, $cookies, $files, $server, (null !== $content) ? $content : '');
     }
 }
